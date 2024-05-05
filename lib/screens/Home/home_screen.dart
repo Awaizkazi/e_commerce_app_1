@@ -1,6 +1,5 @@
 import 'package:e_commerce_app_1/screens/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
