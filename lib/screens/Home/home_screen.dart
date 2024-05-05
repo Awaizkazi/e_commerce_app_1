@@ -27,6 +27,15 @@ class HomeScreen extends StatelessWidget {
                       height: 20,
                     ),
                   ),
+                  // * Icon for Notification
+                  IconButton(
+                      style: IconButton.styleFrom(
+                        backgroundColor: kcontentColor,
+                        padding: const EdgeInsets.all(20.0),
+                      ),
+                      onPressed: () {},
+                      iconSize: 30,
+                      icon: const Icon(Icons.notifications_outlined)),
                 ],
               )
             ],
