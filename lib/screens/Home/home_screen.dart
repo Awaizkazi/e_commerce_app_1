@@ -22,6 +22,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 35.0),
               // * Custom Search Bar Widget
               MySearchBAR(),
+              SizedBox(height: 20.0),
             ],
           ),
         ),
