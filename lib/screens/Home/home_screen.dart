@@ -4,12 +4,19 @@ import 'package:flutter/material.dart';
 
 import 'Widget/home_app_bar.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int currentSldier = 0;
+
+  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
@@ -25,7 +32,13 @@ class HomeScreen extends StatelessWidget {
               MySearchBAR(),
               SizedBox(height: 16.0),
               //TODO Image Slider
-              ImageSlider(),
+              ImageSlider(
+                  onChange: (value) {
+                    setState(() {
+                      currentSldier = value;
+                    });
+                  },
+                  currentSlide: currentSldier)
             ],
           ),
         ),
