@@ -13,35 +13,38 @@ class MySearchBAR extends StatelessWidget {
         color: kcontentColor,
         borderRadius: BorderRadius.circular(30),
       ),
-      child: Row(
-        children: [
-          const Icon(
-            Icons.search,
-            color: Colors.grey,
-            size: 30,
-          ),
-          const SizedBox(width: 10),
-          const Flexible(
-            flex: 4,
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Search...',
-                border: InputBorder.none,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 16),
+        child: Row(
+          children: [
+            const Icon(
+              Icons.search,
+              color: Colors.grey,
+              size: 30,
+            ),
+            const SizedBox(width: 10),
+            const Flexible(
+              flex: 3,
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Search...',
+                  border: InputBorder.none,
+                ),
               ),
             ),
-          ),
-          Container(
-            height: 25,
-            width: 1.5,
-            color: Colors.grey,
-          ),
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.tune,
-                color: Colors.grey,
-              ))
-        ],
+            Container(
+              height: 23,
+              width: 1.5,
+              color: Colors.grey,
+            ),
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.tune,
+                  color: Colors.grey,
+                ))
+          ],
+        ),
       ),
     );
   }
