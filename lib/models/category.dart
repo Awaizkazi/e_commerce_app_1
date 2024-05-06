@@ -10,8 +10,8 @@ class Category {
 // List of all the data
 final List<Category> categories = [
   Category(title: 'Earbuds', image: 'images/ear_buds.jpg'),
-  Category(title: 'Printer', image: 'images/printer.jpeg'),
-  Category(title: "DSLR", image: 'images/dslr.png'),
-  Category(title: 'Projector', image: 'images/projector1.jpg'),
+  Category(title: 'Printer', image: 'images/printer.png'),
+  Category(title: "Air pods", image: 'images/airpods.png'),
+  Category(title: 'Charger', image: 'images/macsafe_charger.png'),
   Category(title: "Neckband", image: 'images/oneplus_neckband.png'),
 ];
