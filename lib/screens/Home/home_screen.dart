@@ -2,6 +2,7 @@
 
 import 'package:e_commerce_app_1/screens/Home/Widget/category.dart';
 import 'package:e_commerce_app_1/screens/Home/Widget/image_slider.dart';
+import 'package:e_commerce_app_1/screens/Home/Widget/product_cart.dart';
 import 'package:e_commerce_app_1/screens/Home/Widget/search_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -68,10 +69,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2),
+                  crossAxisCount: 2,
+                  childAspectRatio: 0.72,
+                  crossAxisSpacing: 20.0,
+                  mainAxisSpacing: 15.0,
+                ),
                 itemCount: products.length,
                 itemBuilder: (context, index) {
-                  return Container();
+                  return ProductCard(
+                    product: products[index],
+                  );
                 },
               ),
             ],
