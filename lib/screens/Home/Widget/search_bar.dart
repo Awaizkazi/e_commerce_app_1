@@ -42,7 +42,7 @@ class MySearchBAR extends StatelessWidget {
                 icon: const Icon(
                   Icons.tune,
                   color: Colors.grey,
-                ))
+                ),),
           ],
         ),
       ),

@@ -20,17 +20,17 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(28.0),
+          padding: const EdgeInsets.all(28.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               // * Cutom AppBar
-              CustomAppBar(),
-              SizedBox(height: 22.0),
+              const CustomAppBar(),
+              const SizedBox(height: 22.0),
               // * Custom Search Bar Widget
-              MySearchBAR(),
-              SizedBox(height: 16.0),
+              const MySearchBAR(),
+              const SizedBox(height: 16.0),
               //TODO Image Slider
               ImageSlider(
                   onChange: (value) {
@@ -38,7 +38,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       currentSldier = value;
                     });
                   },
-                  currentSlide: currentSldier)
+                  currentSlide: currentSldier),
+              const SizedBox(height: 16.0),
             ],
           ),
         ),
