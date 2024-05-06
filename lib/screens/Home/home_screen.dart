@@ -5,6 +5,7 @@ import 'package:e_commerce_app_1/screens/Home/Widget/image_slider.dart';
 import 'package:e_commerce_app_1/screens/Home/Widget/search_bar.dart';
 import 'package:flutter/material.dart';
 
+import '../../models/product.dart';
 import 'Widget/home_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -45,6 +46,34 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 16.0),
               // For Category Section
               Categories(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'Special For You',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                  ),
+                  Text(
+                    'See all',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black54,
+                    ),
+                  ),
+                ],
+              ),
+              // TODO fOr shopping items
+              GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
+                itemCount: products.length,
+                itemBuilder: (context, index) {
+                  return Container();
+                },
+              ),
             ],
           ),
         ),
